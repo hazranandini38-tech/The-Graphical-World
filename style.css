@@ -1,0 +1,572 @@
+Base Colors
+:root {
+  --primary-color: #e295d3;  /* rose pink */
+  --secondary-color: #b39ddb;  /* soft lavender */
+  --background-color: #ffffff;
+  --text-color: #2e2e2e;
+  --accent-color: #6a1b9a;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  color: white;
+}
+
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Optional: Slight background brightness on hover */
+.service-card:hover {
+    filter: brightness(1.05);
+}
+
+
+.logo1 img {
+  height: 65px;
+  width: 60px;
+  display: flex;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+.logo span {
+  color: var(--accent-color);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to bottom right, #fce4ec, #ede7f6);
+}
+
+.hero-section h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--accent-color);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 0.9rem;
+}
+
+
+/* Base Colors */
+:root {
+  --primary-color: #e295d3;  /* rose pink */
+  --secondary-color: #b39ddb;  /* soft lavender */
+  --background-color: #ffffff;
+  --text-color: #e91e63;
+  --accent-color: #6a1b9a;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  color: white;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.logo span {
+  color: var(--accent-color);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to bottom right, #fce4ec, #ede7f6);
+}
+
+.hero-section h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--accent-color);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Portfolio Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .services-grid,
+  .portfolio-grid,
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card,
+  .portfolio-item,
+  .about-container {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+/* .reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+/* Lightbox Close Button */
+.lightbox::after {
+  content: '✖';
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.portfolio-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-card h3 {
+    margin: 10px 0 5px;
+}
+
+.portfolio-card p {
+    padding: 0 10px 15px;
+    font-size: 0.9rem;
+}
+
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.service-card {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #ff7eb3, #ff758c, #ffb199, #f6d365, #a1ffce, #fbc2eb);
+    background-size: 400% 400%;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+    animation: gradientMove 4s linear infinite;
+}
+
+.service-card h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #e91e63;
+}
+
+.service-card p {
+    color: #e91e63;
+    font-size: 0.95rem;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* --- Floating background shapes --- */
+.hero-section::before,
+.hero-section::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.15;
+    z-index: 0;
+    animation: float 10s infinite ease-in-out alternate;
+}
+
+/* Left big shape */
+.hero-section::before {
+    width: 200px;
+    height: 200px;
+    background: #ba68c8;
+    top: -50px;
+    left: -50px;
+}
+
+/* Right small shape */
+.hero-section::after {
+    width: 120px;
+    height: 120px;
+    background: #f48fb1;
+    bottom: -30px;
+    right: -30px;
+    animation-duration: 12s;
+}
+
+/* Floating animation */
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(-20px) rotate(20deg); }
+}
+
+/* Ensure hero content stays on top of shapes */
+.hero-section h1,
+.hero-section p {
+    position: relative;
+    z-index: 1;
+}
+
+/* Navbar basic styling (you can keep yours if already done) */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.navbar .logo1 img {
+    height: 60px;
+}
+.navbar .logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #6a1b9a;
+}
+.navbar .logo span {
+    color: #e91e63;
+}
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+.navbar .nav-links a {
+    text-decoration: none;
+    color:#e91e63 ;
+    transition: color 0.3s;
+}
+.navbar .nav-links a:hover {
+    color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f3e5f5, #fce4ec);
+    position: relative;
+    overflow: hidden;
+}
+.hero-section h1 {
+    font-size: 2.5rem;
+    color: #6a1b9a;
+    position: relative;
+    display: inline-block;
+}
+.hero-section h1::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 50%;
+    background: linear-gradient(to right, #ba68c8, #f48fb1);
+    margin: 8px auto 0;
+    border-radius: 2px;
+    animation: underlineMove 2s infinite alternate;
+}
+@keyframes underlineMove {
+    0% { width: 50%; }
+    100% { width: 80%; }
+}
+.hero-section p {
+    font-size: 1.2rem;
+    color: #4a148c;
+    margin-top: 15px;
+}
+
+/* About Section */
+.about-container {
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border-radius: 10px;
+    padding: 40px 20px;
+    margin-top: -30px;
+    position: relative;
+    z-index: 2;
+}
+.about-container p {
+    font-size: 1.05rem;
+    color: #e91e63;
+    margin-bottom: 20px;
+}
+.about-container p strong {
+    color: #8e24aa;
+}
+
+/* Scroll reveal animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #6a1b9a;
+    color: white;
+    margin-top: 40px;
+}
+
+
+ .contact-container {
+            max-width: 650px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background: #f8f8f8;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-container h2 {
+            margin-bottom: 15px;
+        }
+
+        .social-links a {
+            display: block;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: #d62976;
+            margin-top: 10px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #333;
+            /* Instagram pink */
+        }
+
+
+        
